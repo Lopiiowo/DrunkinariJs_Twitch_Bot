@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AkinariHex/drunkinarijs_twitch_bot#readme",
   "dependencies": {
+    "fs": "0.0.1-security",
     "tmi.js": "^1.2.1"
   }
 }
