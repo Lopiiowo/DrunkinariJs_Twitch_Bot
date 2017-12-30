@@ -1,0 +1,22 @@
+{
+  "name": "drunkinarijs_twitch_bot",
+  "version": "1.0.0",
+  "description": "A Twitch Bot made by Akinari",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkinariHex/drunkinarijs_twitch_bot.git"
+  },
+  "author": "Akinari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkinariHex/drunkinarijs_twitch_bot/issues"
+  },
+  "homepage": "https://github.com/AkinariHex/drunkinarijs_twitch_bot#readme",
+  "dependencies": {
+    "tmi.js": "^1.2.1"
+  }
+}
