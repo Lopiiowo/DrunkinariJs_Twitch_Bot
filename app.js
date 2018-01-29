@@ -1,7 +1,6 @@
 var fs = require('fs');
 var tmi = require('tmi.js');
 var login = require('./login.js');
-const commandFiles = fs.readdirSync('./commands');
 
 var options = {
     options: {
@@ -20,11 +19,14 @@ var options = {
 var client = new tmi.client(options);
 client.connect();
 
-client.on("chat", function (channel, userstate, message, self) {
+client.on("chat", (channel, user, message, self) => {
+    var CHannel = channel.substring(1);
+    const commandFiles = fs.readdirSync(`./commands/${CHannel}`);
     for (const file of commandFiles) {
-        var command = require(`./commands/${file}`);
+        var CHannel = channel.substring(1);
+        var command = require(`./commands/${CHannel}/${file}`);
         if (message == command.name) {
-            client.action(command.channel, command.text);
+            client.say(command.channel, command.text);
         }
     }
 });
