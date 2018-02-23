@@ -1,0 +1,4 @@
+// Restrict a command to a specific user by ID
+if (message.content.startsWith(prefix + 'commandname')) {
+    if (message.author.id !== 'A user ID') return;
+    // Your Command Here
